@@ -6,22 +6,32 @@
  * Time: 01:29 AM
  */
 
-Route::get('/', function () {
-    return view('pages.app');
-});
+
+Route::get('/', [ 'as' => 'login', 'uses' => 'UserLoginController@index' ]);
 
 Route::get('login', function () {
+
+    if (!empty(Session::has('user_login')))
+    {
+        return redirect('/');
+    }
+
     return view('pages.login');
 });
 
-Route::post('login', [ 'as' => 'login', 'uses' => function () {
-    return redirect('/');
-}]);
+Route::post('login', [ 'as' => 'login', 'uses' => 'UserLoginController@login' ]);
 
 
 Route::post('logout', [ 'as' => 'logout', 'uses' => function () {
-    return 'Logout Complete';
 
-    //redirect('login');
+    $user_login_status = Session::has('user_login');
+
+    if (!empty($user_login_status))
+    {
+        Session::clear();
+    }
+
+    return redirect('login');
+
 }]);
 

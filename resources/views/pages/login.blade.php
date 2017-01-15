@@ -54,14 +54,14 @@
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input id="username" name="username" type="text" class="form-control" placeholder="Username">
                             <div class="form-control-feedback">
                                 <i class="icon-user text-muted"></i>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">
-                            <input type="text" class="form-control" placeholder="Password">
+                            <input id="password" name="password" type="text" class="form-control" placeholder="Password">
                             <div class="form-control-feedback">
                                 <i class="icon-lock2 text-muted"></i>
                             </div>
@@ -71,7 +71,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" class="styled" checked="checked">
+                                        <input id="remember_me" name="remember_me" type="checkbox" class="styled" checked="checked">
                                         Remember
                                     </label>
                                 </div>
