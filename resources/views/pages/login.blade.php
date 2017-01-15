@@ -46,7 +46,8 @@
             <div class="content">
 
                 <!-- Advanced login -->
-                <form action="index.html">
+                <form method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="panel panel-body login-form">
                         <div class="text-center">
                             <h5 class="content-group-lg">Login to your account <small class="display-block">Enter your credentials</small></h5>
