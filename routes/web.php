@@ -11,6 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::group([ 'namespace' => 'App', /*'middleware' => 'Authorize'*/], function () {
+
+    require "app.main.routes.php";
+
 });
