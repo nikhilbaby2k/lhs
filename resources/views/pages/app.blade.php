@@ -46,6 +46,7 @@
     </div>
 
     <div class="navbar-collapse collapse" id="navbar-mobile">
+
         <ul class="nav navbar-nav">
             <li>
                 <a class="sidebar-control sidebar-main-toggle hidden-xs">
@@ -147,7 +148,7 @@
                     <li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                    <li><a href="#" ><i class="icon-switch2"></i> Logout</a></li>
+                    <li><a href="#" onclick="logout();"><i class="icon-switch2"></i> Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -295,6 +296,29 @@
 
 </div>
 <!-- /page container -->
+
+<script>
+    function logout()
+    {
+        var input = {
+            url: '{{route('logout')}}',
+            data: {
+                '_token': '{{ csrf_token() }}'
+            },
+
+            success: function (best_response) {
+
+                window.location = '{{route('login')}}';
+
+            },
+            type: 'POST'
+
+        };
+
+        var temp = $.ajax(input);
+
+    }
+</script>
 
 </body>
 </html>

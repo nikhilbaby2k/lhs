@@ -14,12 +14,14 @@ Route::get('login', function () {
     return view('pages.login');
 });
 
-Route::post('login', function () {
+Route::post('login', [ 'as' => 'login', 'uses' => function () {
     return redirect('/');
-});
+}]);
 
 
-Route::post('logout', function () {
-    return redirect('login');
-});
+Route::post('logout', [ 'as' => 'logout', 'uses' => function () {
+    return 'Logout Complete';
+
+    //redirect('login');
+}]);
 
