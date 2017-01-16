@@ -7,7 +7,7 @@
  */
 
 
-Route::get('/', [ 'as' => 'login', 'uses' => 'UserLoginController@index' ]);
+Route::get('/', [ 'as' => '/', 'uses' => 'UserLoginController@index' ]);
 
 Route::get('login', function () {
 
@@ -34,4 +34,11 @@ Route::post('logout', [ 'as' => 'logout', 'uses' => function () {
     return redirect('login');
 
 }]);
+
+Route::get('knowledge-center', [ 'as' => 'knowledge-center', 'uses' => 'UserLoginController@knowledgeCenter' ]);
+Route::get('help', [ 'as' => 'help', 'uses' => 'UserLoginController@help' ]);
+
+Route::get('reporting-executive', [ 'as' => 'reporting-executive', 'uses' => 'UserLoginController@executiveReporting' ]);
+Route::get('reporting-technical', [ 'as' => 'reporting-technical', 'uses' => 'UserLoginController@technicalReporting' ]);
+
 

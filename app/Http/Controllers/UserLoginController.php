@@ -11,11 +11,11 @@ namespace App\Http\Controllers;
 use App\User;
 use Session;
 
-class UserLoginController extends Controller
+class UserLoginController extends AbstractBaseController
 {
     public function __construct()
     {
-
+        parent::__construct();
     }
 
     public function index()
@@ -24,7 +24,7 @@ class UserLoginController extends Controller
 
         if (!empty($user_login_status))
         {
-            return view('pages.app');
+            return view('pages.app', $this->view);
         }
 
         return redirect('login');
@@ -52,6 +52,26 @@ class UserLoginController extends Controller
             return redirect("login");
         }
 
+    }
+
+    public function knowledgeCenter()
+    {
+        return view('pages.knowledge-base', $this->view);
+    }
+
+    public function help()
+    {
+        return view('pages.help', $this->view);
+    }
+
+    public function executiveReporting()
+    {
+        return view('pages.executive-reporting', $this->view);
+    }
+
+    public function technicalReporting()
+    {
+        return view('pages.technical-reporting', $this->view);
     }
 
 
