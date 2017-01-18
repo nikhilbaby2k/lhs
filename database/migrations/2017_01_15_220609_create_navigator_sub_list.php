@@ -45,8 +45,6 @@ class CreateNavigatorSubList extends Migration
      */
     public function down()
     {
-        Schema::table('navigator_sub_list', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('navigator_sub_list');
     }
 }

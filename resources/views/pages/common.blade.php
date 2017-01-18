@@ -20,6 +20,7 @@
     <script type="text/javascript" src="js/core/libraries/jquery.min.js"></script>
     <script type="text/javascript" src="js/core/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/plugins/loaders/blockui.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
@@ -37,7 +38,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.html"><img src="images/logo_light.png" alt=""></a>
+        <a class="navbar-brand" href="/"><img src="images/logo_light.png" alt=""></a>
 
         <ul class="nav navbar-nav visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -198,7 +199,7 @@
                             @foreach($nav_list as $nav_list_item)
                                 <li>
                                     <a @if(!isset($nav_list_item['sub_menu'])) href="{{$nav_list_item['page_url']}}" @else href="#" @endif>
-                                        <i class="icon-stack"></i> <span>{{$nav_list_item['main_name']}}</span>
+                                        <i class="{{$nav_icons[$nav_list_item['main_name']]}}"></i> <span>{{$nav_list_item['main_name']}}</span>
                                     </a>
                                     @if(isset($nav_list_item['sub_menu']))
                                         <ul>
@@ -209,6 +210,14 @@
                                     @endif
                                 </li>
                         @endforeach
+
+                        <li>
+                            <a href="drag-drop" >
+                                <i class="icon-copy"></i> <span>Drag Drop</span>
+                            </a>
+                        </li>
+
+
                         {{--<li><a href="#help"><i class="icon-list-unordered"></i> <span>Need Help</span></a></li>--}}
                         <!-- /main -->
                         </ul>
@@ -261,7 +270,7 @@
 </div>
 <!-- /page container -->
 
-<script>
+<script type="text/javascript">
     function logout()
     {
         var input = {
@@ -280,9 +289,19 @@
         };
 
         var temp = $.ajax(input);
-
     }
+
+    $.ajaxSetup({
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        data: {
+            '_token': '{{ csrf_token() }}'
+        }
+    });
+
 </script>
+@yield('page-specific-scripts')
 
 </body>
 </html>

@@ -47,6 +47,15 @@ class AbstractBaseController extends Controller
         }
 
         $this->view['nav_list'] = $nav_list_array;
+
+        $this->view['nav_icons'] = [
+            'Dashboard' => 'icon-home4',
+            'Reporting' => 'icon-copy',
+            'Order History' => 'icon-droplet2',
+            'Knowledge Center' => 'icon-stack',
+            'Need Help' => 'icon-list-unordered',
+        ];
+
     }
 
 }

@@ -77,7 +77,7 @@
                                 </div>
 
                                 <div class="col-sm-6 text-right">
-                                    <a href="login_password_recover.html">Forgot password?</a>
+                                    <a href="reset-password">Forgot password?</a>
                                 </div>
                             </div>
                         </div>

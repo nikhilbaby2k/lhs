@@ -31,6 +31,10 @@ class CreateNavigatorList extends Migration
                         'main_page' => 'reporting',
                     ],
                     [
+                        'name' => 'Order History',
+                        'main_page' => 'order-history',
+                    ],
+                    [
                         'name' => 'Knowledge Center',
                         'main_page' => 'knowledge-center',
                     ],
