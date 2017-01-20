@@ -93,9 +93,7 @@
                 $.each(sub_items, function (sub_index, sut_item_elt) {
 
                     var sut_item_id = $(sut_item_elt).attr('sub-item-id');
-
                     current_layout.push({ list_id: list_id, sub_item_id: sut_item_id })
-
                 });
 
             });
@@ -112,9 +110,6 @@
                 type: 'POST'
             };
             $.ajax(input);
-
-            console.log(current_layout);
-
 
         }
 

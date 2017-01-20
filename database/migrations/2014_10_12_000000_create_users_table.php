@@ -18,15 +18,25 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->tinyInteger('privilege')->comment = "0 - Guest/User | 1 - Admin";
             $table->rememberToken();
             $table->timestamps();
         });
 
         DB::table('users')
             ->insert([
-                'name' => 'admin',
-                'email' => 'admin',
-                'password' => md5('admin741'),
+                [
+                    'name' => 'Admin',
+                    'email' => 'admin',
+                    'password' => md5('admin741'),
+                    'privilege' => 1,
+                ],
+                [
+                    'name' => 'Aleena',
+                    'email' => 'alena@email.com',
+                    'password' => md5('aleena741'),
+                    'privilege' => 0,
+                ]
             ]);
     }
 

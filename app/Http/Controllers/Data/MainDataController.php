@@ -2,56 +2,38 @@
 /**
  * Created by PhpStorm.
  * User: Nikhil
- * Date: 16-01-2017
- * Time: 03:02 AM
+ * Date: 19-01-2017
+ * Time: 11:26 AM
  */
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Data;
 
-use App\User;
+use App\Http\Controllers\AbstractBaseController;
 use Session;
 
-class UserLoginController extends AbstractBaseController
+class MainDataController extends AbstractBaseController
 {
+
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function index()
+    public function logout()
     {
         $user_login_status = Session::has('user_login');
 
         if (!empty($user_login_status))
         {
-            return view('pages.app', $this->view);
+            Session::clear();
         }
 
         return redirect('login');
     }
 
-    public function login()
+    public function index()
     {
-        $username = \Request::input('username');
-        $password = \Request::input('password');
-
-        $db_check = \DB::table('users')
-                        ->where('email', $username)
-                        ->where('password', md5($password))
-                        ->first();
-
-
-        if (!empty($db_check))
-        {
-            \Session::put('user_login', $username);
-
-            return redirect("");
-        }
-        else
-        {
-            return redirect("login");
-        }
-
+        return view('pages.app', $this->view);
     }
 
     public function knowledgeCenter()
@@ -87,17 +69,17 @@ class UserLoginController extends AbstractBaseController
     public function dragDrop()
     {
         $list_details = \DB::table('drag_drop_lists as ddl')
-                                ->leftJoin('drag_drop_sub_items as ddsi', 'ddl.drag_drop_list_id', '=', 'ddsi.drag_drop_list_id')
-                                ->select([
-                                    'ddl.drag_drop_list_id as list_id',
-                                    'ddl.list_name as list_name',
+            ->leftJoin('drag_drop_sub_items as ddsi', 'ddl.drag_drop_list_id', '=', 'ddsi.drag_drop_list_id')
+            ->select([
+                'ddl.drag_drop_list_id as list_id',
+                'ddl.list_name as list_name',
 
-                                    'ddsi.drag_drop_sub_item_id as sub_item_id',
-                                    'ddsi.sub_list_item_name as sub_item_name',
-                                ])
-                                ->orderBy('ddl.drag_drop_list_id', 'asc')
-                                ->orderBy('ddsi.drag_drop_sub_item_id', 'asc')
-                                ->get();
+                'ddsi.drag_drop_sub_item_id as sub_item_id',
+                'ddsi.sub_list_item_name as sub_item_name',
+            ])
+            ->orderBy('ddl.drag_drop_list_id', 'asc')
+            ->orderBy('ddsi.drag_drop_sub_item_id', 'asc')
+            ->get();
 
         $list_data = [];
         foreach ($list_details as $list_detail_item)
@@ -127,13 +109,14 @@ class UserLoginController extends AbstractBaseController
         foreach ($list_layout as $list_layout_item)
         {
             \DB::table('drag_drop_sub_items')
-                    ->where('drag_drop_sub_item_id', $list_layout_item->sub_item_id)
-                    ->update([
-                        'drag_drop_list_id' => $list_layout_item->list_id
-                    ]);
+                ->where('drag_drop_sub_item_id', $list_layout_item->sub_item_id)
+                ->update([
+                    'drag_drop_list_id' => $list_layout_item->list_id
+                ]);
         }
 
         return 'Saved';
 
     }
+
 }

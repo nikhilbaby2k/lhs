@@ -16,7 +16,15 @@ Route::get('/', function () {
     return view('welcome');
 });*/
 
-Route::group([ /*'namespace' => 'App',*/ /*'middleware' => 'Authorize'*/], function () {
+Route::group([ 'namespace' => 'Login', /*'middleware' => 'LoginAuthMiddleware'*/ ], function () {
+
+    Route::get('login', [ 'as' => 'login', 'uses' => 'UserLoginController@loginView' ]);
+    Route::post('login', [ 'as' => 'login_post', 'uses' => 'UserLoginController@login' ]);
+    Route::get('reset-password', [ 'as' => 'reset-password', 'uses' => 'UserLoginController@restPassword' ]);
+
+});
+
+Route::group([ 'namespace' => 'Data', 'middleware' => 'LoginAuthMiddleware' ], function () {
 
     require "app.main.routes.php";
 

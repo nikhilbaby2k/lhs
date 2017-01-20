@@ -13,7 +13,8 @@
         "illuminate/console": "~5.0",
         "illuminate/config": "~5.0",
         "doctrine/dbal": "2.5.1",
-        "big-shark/sql-to-builder": "dev-master"
+        "big-shark/sql-to-builder": "dev-master",
+        "barryvdh/laravel-debugbar": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

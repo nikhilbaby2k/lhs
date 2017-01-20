@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 
 class AbstractBaseController extends Controller
 {
@@ -17,6 +18,20 @@ class AbstractBaseController extends Controller
     public function __construct()
     {
         $this->getNavList();
+        $this->basic();
+    }
+
+    public function basic()
+    {
+        $session_has_user = Session::has('user_login');
+        dd(Session::all());
+        $session_user_data = Session::get('user_details');
+
+        if($session_has_user)
+        {
+            $this->view['user_name'] = $session_user_data['name'];
+        }
+
     }
 
     protected function getNavList()
