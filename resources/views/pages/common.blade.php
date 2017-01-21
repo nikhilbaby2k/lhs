@@ -13,6 +13,11 @@
     <link href="css/minified/core.min.css" rel="stylesheet" type="text/css">
     <link href="css/minified/components.min.css" rel="stylesheet" type="text/css">
     <link href="css/minified/colors.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/screen.css" type="text/css"/>
+    <link rel="stylesheet" href="css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="css/theme-fixes.css" type="text/css"/>
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css" type="text/css"/>
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -21,13 +26,26 @@
     <script type="text/javascript" src="js/core/libraries/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/plugins/loaders/blockui.min.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.contextMenu.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.position.min.js" type="text/javascript"></script>
+    <script src="js/bootbox.min.js" type="text/javascript"></script>
+    <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+
+    <script src="js/main.js" type="text/javascript"></script>
     <!-- /core JS files -->
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="js/plugins/visualization/d3/d3.min.js"></script>
+    <script type="text/javascript" src="js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/styling/switchery.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script type="text/javascript" src="js/plugins/ui/moment/moment.min.js"></script>
+    <script type="text/javascript" src="js/plugins/pickers/daterangepicker.js"></script>
 
     <script type="text/javascript" src="js/core/app.js"></script>
-    <script type="text/javascript" src="js/charts/echarts/combinations.js"></script>
+    <script type="text/javascript" src="js/pages/dashboard.js"></script>
     <!-- /theme JS files -->
 
 
@@ -139,7 +157,7 @@
             <li class="dropdown dropdown-user">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <img src="images/placeholder.jpg" alt="">
-                    {{--<span>{{$user_name}}</span>--}}
+                    <span>{{$user_name}}</span>
                     <i class="caret"></i>
                 </a>
 
@@ -212,11 +230,10 @@
                         @endforeach
 
                         <li>
-                            <a href="drag-drop" >
-                                <i class="icon-copy"></i> <span>Drag Drop</span>
+                            <a href="drag-drop" class="drag-drop">
+                                <i class="icon-copy "></i> <span>Drag Drop</span>
                             </a>
                         </li>
-
 
                         {{--<li><a href="#help"><i class="icon-list-unordered"></i> <span>Need Help</span></a></li>--}}
                         <!-- /main -->
@@ -299,6 +316,35 @@
             '_token': '{{ csrf_token() }}'
         }
     });
+
+    $(document).ready(function () {
+        contextMenuBind();
+    });
+
+    function contextMenuBind()
+    {
+        $(function() {
+            $.contextMenu({
+                selector: '.drag-drop',
+                callback: function(key, options) {
+
+                    var m = "clicked: " + key;
+                    bootbox.alert(m);
+
+                },
+                items: {
+                    "Drag": {name: "Drag", icon: "drag"},
+                    "Drop": {name: "Drop", icon: "drop"},
+                    "Save": {name: "Save", icon: function(){
+                        return 'save save-icon';
+                    }}
+                }
+            });
+
+        });
+    }
+
+
 
 </script>
 @yield('page-specific-scripts')

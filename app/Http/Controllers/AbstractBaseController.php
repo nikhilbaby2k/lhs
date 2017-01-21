@@ -17,6 +17,11 @@ class AbstractBaseController extends Controller
 
     public function __construct()
     {
+
+    }
+
+    public function init()
+    {
         $this->getNavList();
         $this->basic();
     }
@@ -24,7 +29,6 @@ class AbstractBaseController extends Controller
     public function basic()
     {
         $session_has_user = Session::has('user_login');
-        dd(Session::all());
         $session_user_data = Session::get('user_details');
 
         if($session_has_user)

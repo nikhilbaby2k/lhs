@@ -19,6 +19,13 @@ class MainDataController extends AbstractBaseController
         parent::__construct();
     }
 
+/*    public function __call($method, $args)
+    {
+        call_user_func('init');
+
+        call_user_func_array([$this, $method], $args);
+    }*/
+
     public function logout()
     {
         $user_login_status = Session::has('user_login');
@@ -33,41 +40,50 @@ class MainDataController extends AbstractBaseController
 
     public function index()
     {
+        $this->init();
+
         return view('pages.app', $this->view);
     }
 
     public function knowledgeCenter()
     {
+        $this->init();
         return view('pages.knowledge-base', $this->view);
     }
 
     public function help()
     {
+        $this->init();
         return view('pages.help', $this->view);
     }
 
     public function executiveReporting()
     {
+        $this->init();
         return view('pages.executive-reporting', $this->view);
     }
 
     public function technicalReporting()
     {
+        $this->init();
         return view('pages.technical-reporting', $this->view);
     }
 
     public function restPassword()
     {
+        $this->init();
         return view('pages.reset-password', $this->view);
     }
 
     public function orderHistory()
     {
+        $this->init();
         return view('pages.order-history', $this->view);
     }
 
     public function dragDrop()
     {
+        $this->init();
         $list_details = \DB::table('drag_drop_lists as ddl')
             ->leftJoin('drag_drop_sub_items as ddsi', 'ddl.drag_drop_list_id', '=', 'ddsi.drag_drop_list_id')
             ->select([
