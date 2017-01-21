@@ -42,10 +42,18 @@
                     <label for="saved_status">Save Status:</label>
                     <span id="saved_status" style="color: darkolivegreen">Unchanged</span>
                     <button type="button" onclick="saveLists();">Save</button>
+
+
+                    <button type="button" onclick="testAjaxHTML();">testAjaxHTML</button>
                 </div>
             </div>
         </div>
     </form>
+
+
+    <div id="test_div">
+
+    </div>
 
     <style>
         .draggable-item{
@@ -112,6 +120,21 @@
             };
             $.ajax(input);
 
+        }
+
+        function testAjaxHTML()
+        {
+            var input = {
+                url: '{{route('get_ajax_html')}}',
+                data: {  },
+                success: function (response) {
+
+                    $('#test_div').html(response);
+
+                },
+                type: 'POST'
+            };
+            $.ajax(input);
         }
 
 

@@ -82,7 +82,7 @@
                     <td>{{$debug_info_list_item['time']}}</td>
                     <td>
                         <ul class="icons-list">
-                            <li class="dropdown open">
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <i class="icon-menu9"></i>
                                 </a>

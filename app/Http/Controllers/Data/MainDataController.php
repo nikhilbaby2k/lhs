@@ -195,4 +195,9 @@ class MainDataController extends AbstractBaseController
         }
     }
 
+    public function getAjaxHtml()
+    {
+        return view('pages.testAjaxHtml');
+    }
+
 }

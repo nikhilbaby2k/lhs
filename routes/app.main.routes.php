@@ -19,5 +19,6 @@ Route::get('order-history', [ 'as' => 'order-history', 'uses' => 'MainDataContro
 Route::get('drag-drop', [ 'as' => 'drag-drop', 'uses' => 'MainDataController@dragDrop' ]);
 Route::get('debug', [ 'as' => 'debug', 'uses' => 'MainDataController@debugInfo' ]);
 Route::post('save-drag-drop-list', [ 'as' => 'save_drag_drop_list', 'uses' => 'MainDataController@saveDragDrop' ]);
+Route::post('get-ajax-html', [ 'as' => 'get_ajax_html', 'uses' => 'MainDataController@getAjaxHtml' ]);
 
 

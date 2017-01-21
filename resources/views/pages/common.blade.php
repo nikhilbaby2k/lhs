@@ -503,11 +503,16 @@
                         </li>
                         @if($privilege_level == 1)
                         <li>
-                            <a href="debug" class="drag-drop">
+                            <a href="debug">
                                 <i class="icon-copy "></i> <span>Debug</span>
                             </a>
                         </li>
                         @endif
+                        <li>
+                            <a href="debug">
+                                <i class="icon-copy "></i> <span>{{ date('y-m-d H:m:s e') }}</span>
+                            </a>
+                        </li>
 
                         {{--<li><a href="#help"><i class="icon-list-unordered"></i> <span>Need Help</span></a></li>--}}
                         <!-- /main -->
