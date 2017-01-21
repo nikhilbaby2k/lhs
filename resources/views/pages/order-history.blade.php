@@ -34,7 +34,7 @@
             <div class="panel bg-teal-400">
                 <div class="panel-body">
 
-                    <h3 class="no-margin">3,450</h3>
+                    <h3 class="no-margin" style="color: #fff">3,450</h3>
                     Successful
 
                     <a class="heading-elements-toggle"><i class="icon-menu"></i></a></div>
@@ -56,7 +56,7 @@
 
                     </div>
 
-                    <h3 class="no-margin">48% <span style="font-size: 13px">1,656</span></h3>
+                    <h3 class="no-margin" style="color: #fff"><span style="font-size: 13px">1,656</span></h3>
                     Cancelled
 
                     <a class="heading-elements-toggle"><i class="icon-menu"></i></a></div>
