@@ -34,6 +34,7 @@ class AbstractBaseController extends Controller
         if($session_has_user)
         {
             $this->view['user_name'] = $session_user_data['name'];
+            $this->view['privilege_level'] = $session_user_data['privilege_level'];
         }
 
     }

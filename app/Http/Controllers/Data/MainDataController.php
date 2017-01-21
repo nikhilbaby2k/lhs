@@ -135,4 +135,64 @@ class MainDataController extends AbstractBaseController
 
     }
 
+    public function debugInfo()
+    {
+        $this->init();
+
+        if($this->view['privilege_level'] != 1)
+        {
+            return view('errors.404');
+        }
+
+
+        $debug_data = \DB::table('debug_info')
+                            ->select([
+                                'debug_info_id',
+                                'debug_type_id',
+                                'message',
+                                'debug_msg_status',
+                                'debug_msg_time',
+                            ])
+                            ->get();
+
+        $debug_array = [];
+        foreach ($debug_data as $debug_data_item)
+        {
+            $debug_array[] = [
+                    'debug_id' => $debug_data_item->debug_info_id,
+                    'debug_type' => $this->getDebugTypeName($debug_data_item->debug_type_id),
+                    'description' => $debug_data_item->message,
+                    'status' => $this->getDebugStats($debug_data_item->debug_msg_status),
+                    'time' => $debug_data_item->debug_msg_time,
+            ];
+        }
+
+        $this->view['debug_info_list'] = $debug_array;
+
+
+        return view('pages.debug', $this->view);
+    }
+
+    protected function getDebugTypeName($debug_type_id)
+    {
+        switch ($debug_type_id)
+        {
+
+            case 1: return '<span class="label label-success">Info</span>';
+            case 2: return '<span class="label label-danger">Error</span>';
+            case 3: return '<span class="label label-danger">Un Auth</span>';
+            default: return 'Unknown';
+        }
+    }
+
+    protected function getDebugStats($debug_status_id)
+    {
+        switch ($debug_status_id)
+        {
+            case 1: return 'New';
+            case 2: return 'Read';
+            default: return 'Unknown';
+        }
+    }
+
 }

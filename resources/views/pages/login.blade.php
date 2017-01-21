@@ -51,6 +51,9 @@
                     <div class="panel panel-body login-form">
                         <div class="text-center">
                             <h5 class="content-group-lg">Login to your account <small class="display-block">Enter your credentials</small></h5>
+                            @if(isset($error))
+                                <small style="color: red; margin-bottom: 15px;">{{$error}}</small>
+                            @endif
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">

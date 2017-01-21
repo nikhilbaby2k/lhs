@@ -9,6 +9,7 @@
 namespace App\Http\Controllers\Login;
 
 use App\Http\Controllers\AbstractBaseController;
+use Carbon\Carbon;
 use Session;
 
 class UserLoginController extends AbstractBaseController
@@ -51,11 +52,26 @@ class UserLoginController extends AbstractBaseController
             Session::put('user_login', $username);
             Session::put('user_details', $user_array);
 
+            \DB::table('debug_info')
+                ->insert([
+                    'debug_type_id' => 1, //Info,
+                    'message' => "User Login with: u: $username: id: " . $db_check->id,
+                    'debug_msg_status' => 1
+                ]);
+
             return redirect("");
         }
         else
         {
-            return redirect("login");
+
+            \DB::table('debug_info')
+                    ->insert([
+                        'debug_type_id' => 3, //Un Auth,
+                        'message' => "User Tried to Login with: u: $username : p: $password",
+                        'debug_msg_status' => 1
+                    ]);
+
+            return view("pages.login", [ 'error' => 'Auth Not Valid' ]);
         }
 
     }

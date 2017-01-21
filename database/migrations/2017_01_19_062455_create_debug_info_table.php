@@ -18,6 +18,7 @@ class CreateDebugInfoTable extends Migration
             $table->tinyInteger('debug_type_id')->comment = "1 - Info | 2 - Error | 3 - Un Auth/Session_Out";
             $table->string('message');
             $table->tinyInteger('debug_msg_status')->comment = "1 - New/Unread | 2 - Read";
+            $table->dateTime('debug_msg_time')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

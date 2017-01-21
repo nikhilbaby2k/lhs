@@ -234,6 +234,13 @@
                                 <i class="icon-copy "></i> <span>Drag Drop</span>
                             </a>
                         </li>
+                        @if($privilege_level == 1)
+                        <li>
+                            <a href="debug" class="drag-drop">
+                                <i class="icon-copy "></i> <span>Debug</span>
+                            </a>
+                        </li>
+                        @endif
 
                         {{--<li><a href="#help"><i class="icon-list-unordered"></i> <span>Need Help</span></a></li>--}}
                         <!-- /main -->

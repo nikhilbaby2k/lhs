@@ -17,6 +17,7 @@ Route::get('reporting-technical', [ 'as' => 'reporting-technical', 'uses' => 'Ma
 Route::get('order-history', [ 'as' => 'order-history', 'uses' => 'MainDataController@orderHistory' ]);
 
 Route::get('drag-drop', [ 'as' => 'drag-drop', 'uses' => 'MainDataController@dragDrop' ]);
+Route::get('debug', [ 'as' => 'debug', 'uses' => 'MainDataController@debugInfo' ]);
 Route::post('save-drag-drop-list', [ 'as' => 'save_drag_drop_list', 'uses' => 'MainDataController@saveDragDrop' ]);
 
 
