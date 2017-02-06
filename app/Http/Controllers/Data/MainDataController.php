@@ -78,6 +78,34 @@ class MainDataController extends AbstractBaseController
     public function orderHistory()
     {
         $this->init();
+        $this->generateSubscriptions();
+        $user_id = Session::get('user_details')['user_id'];
+
+        $order_details = \DB::table('order_history')
+                            ->where('user_id', $user_id)
+                            ->orderBy('order_history_id', 'asc')
+                            ->select([
+                                'order_history_id',
+                                'course_subscription_id',
+                                'inserted_time',
+                            ])
+                            ->get();
+
+        $course_subscription_details = $this->view['feature_detail'];
+        $order_data = [];
+        foreach ($order_details as $order_detail_item)
+        {
+            $order_data[] = [
+                'order_id' => $order_detail_item->order_history_id,
+                'course_name' => $this->view['main_subscriptions'][$order_detail_item->course_subscription_id],
+                'course_desc' => $this->view['main_subscriptions'][$order_detail_item->course_subscription_id] . ' Description',
+                'cost' => '$' . $course_subscription_details[$order_detail_item->course_subscription_id]['subscription_cost'],
+                'time' => date("d M, Y H:i:s", strtotime($order_detail_item->inserted_time) ),
+            ];
+        }
+        $this->view['order_data'] = $order_data;
+
+
         return view('pages.order-history', $this->view);
     }
 

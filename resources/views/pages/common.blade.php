@@ -481,6 +481,12 @@
                         <ul class="navigation navigation-main navigation-accordion">
                             <!-- Main -->
 
+                            <li>
+                                <a href="home-page" class="">
+                                    <i class="icon-copy "></i> <span>Home Page</span>
+                                </a>
+                            </li>
+
                             @foreach($nav_list as $nav_list_item)
                                 <li>
                                     <a @if(!isset($nav_list_item['sub_menu'])) href="{{$nav_list_item['page_url']}}" @else href="#" @endif>
@@ -499,6 +505,11 @@
                         <li>
                             <a href="drag-drop" class="drag-drop">
                                 <i class="icon-copy "></i> <span>Drag Drop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="academic" class="">
+                                <i class="icon-copy "></i> <span>Academic</span>
                             </a>
                         </li>
                         @if($privilege_level == 1)

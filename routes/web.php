@@ -26,7 +26,7 @@ Route::group([ 'namespace' => 'Login', /*'middleware' => 'LoginAuthMiddleware'*/
 
 Route::group([ 'namespace' => 'Data', /*'middleware' => 'LoginAuthMiddleware'*/ ], function () {
 
-    Route::get('dashboard', [ 'as' => 'dashboard', 'uses' => 'DashboardController@dashboard' ]);
+    Route::get('home-page', [ 'as' => 'home-page', 'uses' => 'DashboardController@dashboard' ]);
 
 
 });
