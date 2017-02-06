@@ -170,6 +170,12 @@
         var password_2 = $('#password_2').val();
         var user_name = $('#username_sign_up').val();
 
+        if(password_1 == '' || password_2 == '' || user_name == '')
+        {
+            window.alert('Please fill up the form');
+            return;
+        }
+
         if((password_1 != password_2))
         {
             window.alert('Passwords should match');

@@ -459,7 +459,7 @@
                         <div class="media">
                             <a href="#" class="media-left"><img src="images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
                             <div class="media-body">
-                                <span class="media-heading text-semibold">Victoria Baker</span>
+                                <span class="media-heading text-semibold">{{$user_name}}</span>
                                 <div class="text-size-mini text-muted">
                                     &nbsp;Company name
                                 </div>

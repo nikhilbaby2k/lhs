@@ -425,21 +425,15 @@ Follow: http://www.twitter.com/themehats
                 <form>
                     <div class="form-group">
                         <label for="signup-email" class="hide">Email</label>
-                        <input type="email" class="form-control input-lg c-square" id="signup-email" placeholder="Email"> </div>
+                        <input type="email" class="form-control input-lg c-square" id="username_sign_up" placeholder="Email"> </div>
                     <div class="form-group">
-                        <label for="signup-username" class="hide">Username</label>
-                        <input type="email" class="form-control input-lg c-square" id="signup-username" placeholder="Email"> </div>
+                        <label for="signup-fullname" class="hide">Password</label>
+                        <input type="password" class="form-control input-lg c-square" id="password_1" placeholder="Password"> </div>
                     <div class="form-group">
-                        <label for="signup-fullname" class="hide">Fullname</label>
-                        <input type="email" class="form-control input-lg c-square" id="signup-fullname" placeholder="Fullname"> </div>
+                        <label for="signup-fullname" class="hide">Password</label>
+                        <input type="password" class="form-control input-lg c-square" id="password_2" placeholder="Password"> </div>
                     <div class="form-group">
-                        <label for="signup-country" class="hide">Country</label>
-                        <select class="form-control input-lg c-square" id="signup-country">
-                            <option value="1">Country</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Signup</button>
+                        <button type="submit" onclick="registerNow();" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Signup</button>
                         <a href="javascript:;" class="c-btn-forgot" data-toggle="modal" data-target="#login-form" data-dismiss="modal">Back To Login</a>
                     </div>
                 </form>
@@ -481,25 +475,7 @@ Follow: http://www.twitter.com/themehats
                         <button type="submit" class="btn c-theme-btn btn-md c-btn-uppercase c-btn-bold c-btn-square c-btn-login">Login</button>
                         <a href="javascript:;" data-toggle="modal" data-target="#forget-password-form" data-dismiss="modal" class="c-btn-forgot">Forgot Your Password ?</a>
                     </div>
-                    <div class="clearfix">
-                        <div class="c-content-divider c-divider-sm c-icon-bg c-bg-grey c-margin-b-20">
-                            <span>or signup with</span>
-                        </div>
-                        <ul class="c-content-list-adjusted">
-                            <li>
-                                <a class="btn btn-block c-btn-square btn-social btn-twitter">
-                                    <i class="fa fa-twitter"></i> Twitter </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-block c-btn-square btn-social btn-facebook">
-                                    <i class="fa fa-facebook"></i> Facebook </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-block c-btn-square btn-social btn-google">
-                                    <i class="fa fa-google"></i> Google </a>
-                            </li>
-                        </ul>
-                    </div>
+
                 </form>
             </div>
             <div class="modal-footer c-no-border">
@@ -1499,12 +1475,21 @@ Follow: http://www.twitter.com/themehats
     ga('send', 'pageview');
 
 
+    $.ajaxSetup({
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        data: {
+            '_token': '{{ csrf_token() }}'
+        }
+    });
+
     function logout()
     {
         var input = {
             url: '{{route('logout')}}',
             data: {
-                '_token': '{{ csrf_token() }}'
+
             },
 
             success: function (best_response) {
@@ -1539,6 +1524,60 @@ Follow: http://www.twitter.com/themehats
             });
 
         });
+    }
+
+    function registerNow() {
+
+        var password_1 = $('#password_1').val();
+        var password_2 = $('#password_2').val();
+        var user_name = $('#username_sign_up').val();
+
+        if(password_1 == '' || password_2 == '' || user_name == '')
+        {
+            window.alert('Please fill up the form');
+            return;
+        }
+
+        if((password_1 != password_2))
+        {
+            window.alert('Passwords should match');
+            return;
+        }
+
+        if(user_name == '')
+        {
+            window.alert('Please give a user-name');
+            return;
+        }
+
+        var input = {
+            url: '{{route('sign_up')}}',
+            data: {
+                password: password_1,
+                username: user_name
+            },
+
+            success: function (response) {
+
+                if(response == 'user_exist')
+                {
+                    $('#sign_up_error').html('User Already exists').show();
+                    alert('User Already exists');
+                    return;
+                }
+
+                if(response == 'user_created')
+                {
+                    $('#sign_up_error').html('').hide();
+                    window.location = '{{route('login')}}';
+                }
+
+            },
+            type: 'POST'
+
+        };
+
+        var temp = $.ajax(input);
     }
 
 
