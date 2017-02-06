@@ -428,7 +428,7 @@ Follow: http://www.twitter.com/themehats
                         <input type="email" class="form-control input-lg c-square" id="signup-email" placeholder="Email"> </div>
                     <div class="form-group">
                         <label for="signup-username" class="hide">Username</label>
-                        <input type="email" class="form-control input-lg c-square" id="signup-username" placeholder="Username"> </div>
+                        <input type="email" class="form-control input-lg c-square" id="signup-username" placeholder="Email"> </div>
                     <div class="form-group">
                         <label for="signup-fullname" class="hide">Fullname</label>
                         <input type="email" class="form-control input-lg c-square" id="signup-fullname" placeholder="Fullname"> </div>

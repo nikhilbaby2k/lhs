@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">
-                            <input id="username" name="username" type="text" class="form-control" placeholder="Username">
+                            <input id="username" name="username" type="text" class="form-control" placeholder="Email">
                             <div class="form-control-feedback">
                                 <i class="icon-user text-muted"></i>
                             </div>
@@ -105,7 +105,7 @@
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">
-                            <input id="username_sign_up" name="username_sign_up" type="email" class="form-control" placeholder="Username">
+                            <input id="username_sign_up" name="username_sign_up" type="email" class="form-control" placeholder="Email">
                             <div class="form-control-feedback">
                                 <i class="icon-user text-muted"></i>
                             </div>
