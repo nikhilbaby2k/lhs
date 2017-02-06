@@ -31,7 +31,7 @@ class LoginAuthMiddleware
 
         if (!$session_has_user)
         {
-            return redirect('login');
+            return redirect('home-page');
         }
 
         return $next($request);

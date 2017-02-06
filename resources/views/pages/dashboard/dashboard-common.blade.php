@@ -1136,11 +1136,13 @@ Follow: http://www.twitter.com/themehats
                                 <div class="c-row c-purchase">
                                     <a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold"
 
-                                       @if(isset($user_order_history[$course_subscription_id]))
+                                       @if(!isset($user_name))
+                                            data-toggle="modal" data-target="#login-form" >Login to purchase
+                                       @elseif(isset($user_order_history[$course_subscription_id]))
                                             disabled="disabled">BOUGHT
-                                        @else
+                                       @else
                                             href="checkout\{{$course_subscription_id}}">PURCHASE
-                                        @endif
+                                       @endif
                                     </a>
                                 </div>
                             </div>
