@@ -76,5 +76,38 @@ class UserLoginController extends AbstractBaseController
 
     }
 
+    public function signUp()
+    {
+        $username = \Request::input('username');
+        $password = \Request::input('password');
+
+        $db_check = \DB::table('users')
+                        ->where('email', $username)
+                        ->first();
+
+        if (!empty($db_check))
+        {
+            return 'user_exist';
+        }
+
+        \DB::table('users')
+            ->insert([
+                'name' => $username,
+                'email' => $username,
+                'password' => md5($password),
+                'privilege' => 0,
+            ]);
+
+        \DB::table('debug_info')
+            ->insert([
+                'debug_type_id' => 1, //info
+                'message' => "User Signed Up with: u: $username : p: $password",
+                'debug_msg_status' => 1
+            ]);
+
+        return 'user_created';
+
+    }
+
 
 }

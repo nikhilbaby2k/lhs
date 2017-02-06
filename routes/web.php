@@ -20,6 +20,7 @@ Route::group([ 'namespace' => 'Login', /*'middleware' => 'LoginAuthMiddleware'*/
 
     Route::get('login', [ 'as' => 'login', 'uses' => 'UserLoginController@loginView' ]);
     Route::post('login', [ 'as' => 'login_post', 'uses' => 'UserLoginController@login' ]);
+    Route::post('sign-up', [ 'as' => 'sign_up', 'uses' => 'UserLoginController@signUp' ]);
     Route::get('reset-password', [ 'as' => 'reset-password', 'uses' => 'UserLoginController@restPassword' ]);
 
 });

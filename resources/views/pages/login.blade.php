@@ -46,6 +46,7 @@
             <div class="content">
 
                 <!-- Advanced login -->
+                <div id="login_container">
                 <form method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="panel panel-body login-form">
@@ -78,9 +79,11 @@
                                         Remember
                                     </label>
                                 </div>
-
                                 <div class="col-sm-6 text-right">
                                     <a href="reset-password">Forgot password?</a>
+                                </div>
+                                <div class="col-sm-12" style="margin-top: 2em">
+                                    <a onclick="$('#login_container').hide();$('#register').show();">Don't Have an account. Click here to Sign Up</a>
                                 </div>
                             </div>
                         </div>
@@ -91,6 +94,55 @@
                         <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a></span>
                     </div>
                 </form>
+                </div>
+                <div id="register" style="display: none">
+                <form method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="panel panel-body login-form">
+                        <div class="text-center">
+                            <h5 class="content-group-lg">Sign up for free<small class="display-block">Enter your credentials</small></h5>
+                            <small style="color: red; margin-bottom: 15px; display: none;" id="sign_up_error"></small>
+                        </div>
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            <input id="username_sign_up" name="username_sign_up" type="text" class="form-control" placeholder="Username">
+                            <div class="form-control-feedback">
+                                <i class="icon-user text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            <input id="password_1" name="password_1" type="password" class="form-control" placeholder="Password">
+                            <div class="form-control-feedback">
+                                <i class="icon-lock2 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            <input id="password_2" name="password_2" type="password" class="form-control" placeholder="Password">
+                            <div class="form-control-feedback">
+                                <i class="icon-lock2 text-muted"></i>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <button onclick="registerNow();" type="button" class="btn bg-blue btn-block">Register <i class="icon-circle-right2 position-right"></i></button>
+                        </div>
+
+                        <div class="form-group login-options">
+                            <div class="row">
+                                <div class="col-sm-12" >
+                                    <a {{--style="color: blue; cursor: pointer; border: dotted; border-radius: 1px;"--}}  onclick="$('#login_container').show();$('#register').hide();">Already Have an account. Click here to Log In</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="help-block text-center no-margin">By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a></span>
+                    </div>
+                </form>
+                </div>
                 <!-- /advanced login -->
 
 
@@ -109,6 +161,67 @@
 
 </div>
 <!-- /page container -->
+
+<script type="text/javascript">
+
+    function registerNow() {
+
+        var password_1 = $('#password_1').val();
+        var password_2 = $('#password_2').val();
+        var user_name = $('#username_sign_up').val();
+
+        if((password_1 != password_2))
+        {
+            window.alert('Passwords should match');
+            return;
+        }
+
+        if(user_name == '')
+        {
+            window.alert('Please give a user-name');
+            return;
+        }
+
+        var input = {
+            url: '{{route('sign_up')}}',
+            data: {
+                password: password_1,
+                username: user_name
+            },
+
+            success: function (response) {
+
+                if(response == 'user_exist')
+                {
+                    $('#sign_up_error').html('User Already exists').show();
+                    alert('User Already exists');
+                    return;
+                }
+
+                if(response == 'user_created')
+                {
+                    $('#sign_up_error').html('').hide();
+                    window.location = '{{route('login')}}';
+                }
+
+            },
+            type: 'POST'
+
+        };
+
+        var temp = $.ajax(input);
+    }
+
+    $.ajaxSetup({
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        data: {
+            '_token': '{{ csrf_token() }}'
+        }
+    });
+
+</script>
 
 </body>
 </html>
