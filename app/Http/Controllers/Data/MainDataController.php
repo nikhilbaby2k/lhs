@@ -200,4 +200,140 @@ class MainDataController extends AbstractBaseController
         return view('pages.testAjaxHtml');
     }
 
+    public function checkout($order_id)
+    {
+
+        $this->generateSubscriptions();
+        //Un available subscription
+        if (!isset($this->view['main_subscriptions'][$order_id]))
+        {
+            return redirect('dashboard');
+        }
+
+        $this->view['subscription_cost'] = $this->view['feature_detail'][$order_id]['subscription_cost'];
+        $this->view['subscription_name'] = $this->view['main_subscriptions'][$order_id];
+        $this->view['order_id'] = $order_id;
+
+        //dd($this->view['feature_detail'][$order_id]['subscription_cost']);
+
+        if (isset($this->view['user_order_history'][$order_id]))
+        {
+            return redirect('dashboard');
+        }
+
+        $this->init();
+        return view('pages.checkout', $this->view);
+    }
+
+    public function getCourseDetails()
+    {
+        $user_courses = $this->view['user_order_history'];
+        $user_id = \Session::get('user_details')['user_id'];
+
+
+        $course_details = \DB::table('course_subject_mapping as csm')
+            ->join('subject_mapping as sm', 'csm.subject_mapping_id', '=', 'sm.subject_mapping_id')
+            ->join('subjects as s', 's.subject_id', '=', 'sm.subject_id')
+            ->join('course_category_mapping as ccm', 'ccm.course_category_mapping_id', '=', 'csm.course_category_mapping_id')
+            ->join('courses as c', 'c.course_id', '=', 'ccm.course_id')
+            ->join('order_history as oh', 'oh.course_subscription_id', '=', 'c.course_id')
+            ->where('oh.user_id', $user_id)
+            ->select([
+                'c.course_id',
+                'c.course_name',
+                's.subject_id',
+                's.subject_name',
+            ])
+            ->get();
+
+        $user_courses = [];
+        foreach ($course_details as $course_detail_item)
+        {
+            $course_id = $course_detail_item->course_id;
+            $subject_id = $course_detail_item->subject_id;
+
+            $user_courses[$course_id]['course_name'] = $course_detail_item->course_name;
+            $user_courses[$course_id]['subjects'][$subject_id] = $course_detail_item->subject_name;
+        }
+
+
+        $this->view['user_courses'] = $user_courses;
+
+    }
+
+    public function academicRoot()
+    {
+        $this->init();
+        $this->generateSubscriptions();
+        $this->getCourseDetails();
+        return view('pages.academic.academic', $this->view);
+    }
+
+    public function getSubjectDetail()
+    {
+        $subject_id = \Request::input('subject_id');
+
+        $subject_details = \DB::table('subject_mapping as sm')
+                ->join('topic_mapping as tm', 'tm.topic_mapping_id', '=', 'sm.topic_mapping_id')
+                ->join('subjects as s', 's.subject_id', '=', 'sm.subject_id')
+                ->join('topics as t', 't.topic_id', '=', 'tm.topic_id')
+                ->join('chapters as c', 'c.chapter_id', '=', 'tm.chapter_id')
+                ->where('s.subject_id', $subject_id)
+                ->select([
+                    's.subject_id',
+                    's.subject_name',
+                    's.subject_detail',
+
+                    't.topic_id',
+                    't.topic_name',
+                    't.topic_detail',
+
+                    'c.chapter_id',
+                    'c.chapter_name',
+                    'c.chapter_detail',
+                ])
+                ->get();
+
+
+        $subject_data = [];
+        foreach ($subject_details as $subject_detail_item)
+        {
+            $subject_id = $subject_detail_item->subject_id;
+            $subject_name = $subject_detail_item->subject_name;
+
+            $topic_id = $subject_detail_item->topic_id;
+            $chapter_id = $subject_detail_item->chapter_id;
+
+            $subject_data['subject_name'] = $subject_name;
+            $subject_data['topics'][$topic_id] = [ 'topic_name' => $subject_detail_item->topic_name, 'topic_detail' => $subject_detail_item->topic_detail ];
+
+            $subject_data['topics'][$topic_id]['chapters'][$chapter_id] = [ 'chapter_name' => $subject_detail_item->chapter_name, 'chapter_detail' => $subject_detail_item->chapter_detail ];
+
+        }
+
+        return view('pages.academic.subject-info', [ 'subject_details' => $subject_data]);
+
+    }
+
+
+    public function purchaseCourse()
+    {
+        $order_id = \Request::input('order_id');
+        $user_id = Session::get('user_details')['user_id'];
+
+        if($user_id)
+        {
+            \DB::table('order_history')
+                    ->insert([
+                        'user_id' => $user_id,
+                        'course_subscription_id' => $order_id,
+                    ]);
+
+            return redirect('order-history');
+        }
+
+        return 'fail';
+
+    }
+
 }

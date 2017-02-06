@@ -22,3 +22,14 @@ Route::post('save-drag-drop-list', [ 'as' => 'save_drag_drop_list', 'uses' => 'M
 Route::post('get-ajax-html', [ 'as' => 'get_ajax_html', 'uses' => 'MainDataController@getAjaxHtml' ]);
 
 
+Route::get('checkout/{order_id}', [ 'as' => 'dashboard', 'uses' => 'MainDataController@checkout' ]);
+Route::post('purchase-course', [ 'as' => 'purchase_course', 'uses' => 'MainDataController@purchaseCourse' ]);
+Route::get('academic', [ 'as' => 'academic', 'uses' => 'MainDataController@academicRoot' ]);
+
+
+Route::post('get-subject-detail', [ 'as' => 'get_subject_detail', 'uses' => 'MainDataController@getSubjectDetail' ]);
+
+
+
+
+
