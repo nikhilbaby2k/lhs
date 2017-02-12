@@ -45,7 +45,7 @@
         {{--  Content 1 END --}}
 
         {{--  Content 2 Start --}}
-        <div class="col-lg-3">
+        <div class="col-lg-3 data-graph-dropable">
             <!-- Members online -->
             <div class="panel bg-teal-400">
                 <div class="panel-body">
@@ -131,6 +131,9 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
+
+        $( ".data-graph-dropable" ).draggable();
+
         $('#DataTables_Table_2').DataTable();
         console.log('init dt');
 
