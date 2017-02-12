@@ -29,6 +29,8 @@ Route::group([ 'namespace' => 'Data', /*'middleware' => 'LoginAuthMiddleware'*/ 
 
     Route::get('home-page', [ 'as' => 'home-page', 'uses' => 'DashboardController@dashboard' ]);
 
+    //Drag-Drop Dynamic Demo
+    Route::get('drag-drop-dynamic', [ 'as' => 'drag_drop_dynamic', 'uses' => 'DragDropRequirementController@index' ]);
 
 });
 
