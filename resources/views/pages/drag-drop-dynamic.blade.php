@@ -136,6 +136,205 @@
 
     });
 
+    $('th.data-column').click( function () {
+        var data_col_name = $(this).attr('data-col-value');
+        var data_col_heading = $(this).html();
+
+        var date_ordering = [];
+        var all_dates = $('td[data-col-name="date"]');
+
+        $.each(all_dates, function (index, date_elt) {
+            var date_value = $(date_elt).html();
+            date_ordering.push(date_value);
+        });
+
+        var all_data_sets = $('td[data-col-name="'+data_col_name+'"]');
+        var all_data_sets_values = [];
+
+        $.each(all_data_sets, function (index, elt) {
+            var data_value = $(elt).html();
+            all_data_sets_values.push({name: date_ordering[index], y: parseInt(data_value)});
+        });
+
+        console.log('Date Order: ', date_ordering);
+        console.log('Data Col Name: ', data_col_heading);
+        console.log('Data Set: ', all_data_sets_values);
+
+
+        Highcharts.chart('chart-1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: data_col_heading
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Value'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.0f}'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> ' + data_col_heading + '<br/>'
+            },
+
+            series: [{
+                name: data_col_heading,
+                colorByPoint: true,
+                data: all_data_sets_values
+            }],
+            drilldown: {}
+        });
+
+
+    } );
+
+    $('td.date-row').click( function () {
+        var date_heading = $(this).html();
+        var row_set = $(this).parent().find('.data-item-cell');
+        console.log(row_set);
+
+        var all_data_sets_values = [];
+
+        $.each(row_set, function (index, elt) {
+            var data_value = $(elt).html();
+            var data_name = $(elt).attr('data-col-name');
+            all_data_sets_values.push({name: data_name, y: parseInt(data_value)});
+        });
+
+        console.log('Data Set: ', all_data_sets_values);
+
+
+        Highcharts.chart('chart-1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Data for ' + date_heading
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Value'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.0f}'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> <br/>'
+            },
+
+            series: [{
+                name: 'Data for ' + date_heading,
+                colorByPoint: true,
+                data: all_data_sets_values
+            }],
+            drilldown: {}
+        });
+
+
+    } );
+
+    $('td.data-item-cell').click( function () {
+        var date_col_name = $(this).attr('data-col-name');
+        var date_col_date = $(this).parent().find('.date-row').html();
+        var data_value = $(this).html();
+
+        var row_set = $(this).parent().find('.data-item-cell');
+        console.log(row_set);
+
+        var all_data_sets_values = [];
+
+        all_data_sets_values.push({name: date_col_name, y: parseInt(data_value)});
+
+        console.log('Data Set: ', all_data_sets_values);
+
+        Highcharts.chart('chart-1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Data for ' + date_col_date
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Value'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.0f}'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b>  <br/>'
+            },
+
+            series: [{
+                name: 'Data for ' + date_col_date,
+                colorByPoint: true,
+                data: all_data_sets_values
+            }],
+            drilldown: {}
+        });
+
+
+    } );
+
     //High-chart start
     Highcharts.chart('chart-1', {
         chart: {
