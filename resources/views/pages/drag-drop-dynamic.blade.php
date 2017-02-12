@@ -75,19 +75,19 @@
                id="DataTables_Table_2" role="grid" aria-describedby="DataTables_Table_2_info">
             <thead>
             <tr role="row">
-                <th class="sorting_asc data-column" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
+                <th class="sorting_asc data-column data-date" data-col-value="date" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
                     aria-sort="ascending" aria-label="First Name: activate to sort column descending">Date
                 </th>
-                <th class="sorting data-column" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
+                <th class="sorting data-column" data-col-value="withdrawal" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
                     aria-label="Last Name: activate to sort column ascending">Withdrawal
                 </th>
-                <th class="sorting data-column" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
+                <th class="sorting data-column" data-col-value="balance-enquiry" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
                     aria-label="Job Title: activate to sort column ascending">Balance Enquiry
                 </th>
-                <th class="sorting data-column" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
+                <th class="sorting data-column" data-col-value="decline"  tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
                     aria-label="DOB: activate to sort column ascending">Declines
                 </th>
-                <th class="sorting data-column" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
+                <th class="sorting data-column" data-col-value="invalid-pin" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
                     aria-label="Status: activate to sort column ascending">Invalid PIN
                 </th>
 
@@ -97,11 +97,11 @@
 
             @foreach($data_set as $data_set_number => $data_set_item)
                 <tr role="row" @if($data_set_number%2 == 0) class="even" @else class="odd" @endif >
-                        <td class="sorting_1 date-row">{{$data_set_item['date']}}</td>
-                        <td class="sorting_1 data-item-cell">{{$data_set_item['withdrawal']}}</td>
-                        <td class="sorting_1 data-item-cell">{{$data_set_item['balance_enquiry']}}</td>
-                        <td class="sorting_1 data-item-cell">{{$data_set_item['decline']}}</td>
-                        <td class="sorting_1 data-item-cell">{{$data_set_item['invalid_pin']}}</td>
+                        <td class="sorting_1 date-row" data-col-name="date">{{$data_set_item['date']}}</td>
+                        <td class="sorting_1 data-item-cell" data-col-name="withdrawal">{{$data_set_item['withdrawal']}}</td>
+                        <td class="sorting_1 data-item-cell" data-col-name="balance-enquiry">{{$data_set_item['balance_enquiry']}}</td>
+                        <td class="sorting_1 data-item-cell" data-col-name="decline">{{$data_set_item['decline']}}</td>
+                        <td class="sorting_1 data-item-cell" data-col-name="invalid-pin">{{$data_set_item['invalid_pin']}}</td>
                 </tr>
             @endforeach
 
@@ -132,27 +132,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
 
-        $( ".data-graph-dropable" ).draggable();
-
         $('#DataTables_Table_2').DataTable();
-        console.log('init dt');
-
-        $('table#DataTables_Table_2').find('th.data-column').sortable({
-            connectWith: 'th.data-column'
-        });
-
-
-        $('.data-graph-droppable').droppable({
-            drop: function( event, ui ) {
-
-                console.log('Drop Received');
-
-
-                /*setTimeout(function () {
-                    saveLists();
-                }, 100);*/
-            }
-        });
 
     });
 
