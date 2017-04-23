@@ -1,21 +1,6 @@
 <!DOCTYPE html>
-<!--
-Theme: letshomestudy.com - Ultimate Multipurpose HTML Theme Built With Twitter Bootstrap 3.3.5
-Version: 1.3.5
-Author: Themehats
-Site: http://www.themehats.com
-Purchase: http://themeforest.net/item/letshomestudy.com-responsive-multipurpose-html5-template/11987314?ref=themehats
-Contact: support@themehats.com
-Follow: http://www.twitter.com/themehats
--->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
 
-
-<!-- Mirrored from themehats.com/themes/letshomestudy.com/home-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Feb 2016 11:27:33 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8" />
@@ -27,29 +12,29 @@ Follow: http://www.twitter.com/themehats
     <meta content="" name="author" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
-    <link href="assets/plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/socicon/socicon.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/bootstrap-social/bootstrap-social.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/animate/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN: BASE PLUGINS  -->
-    <link href="assets/plugins/revo-slider/css/settings.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/revo-slider/css/layers.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/revo-slider/css/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/slider-for-bootstrap/css/slider.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/revo-slider/css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/revo-slider/css/layers.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/revo-slider/css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/plugins/slider-for-bootstrap/css/slider.css" rel="stylesheet" type="text/css" />
     <!-- END: BASE PLUGINS -->
     <!-- BEGIN THEME STYLES -->
-    <link href="assets/base/css/plugins.css" rel="stylesheet" type="text/css" />
-    <link href="assets/base/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
-    <link href="assets/base/css/themes/default.css" rel="stylesheet" id="style_theme" type="text/css" />
-    <link href="assets/base/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/base/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="home/assets/base/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="home/assets/base/css/themes/default.css" rel="stylesheet" id="style_theme" type="text/css" />
+    <link href="home/assets/base/css/custom.css" rel="stylesheet" type="text/css" />
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico" /> </head>
 
@@ -59,30 +44,7 @@ Follow: http://www.twitter.com/themehats
 <header class="c-layout-header c-layout-header-2 c-layout-header-dark-mobile c-header-transparent-dark" data-minimize-offset="80">
     <div class="c-navbar">
         <div class="container">
-            <!-- BEGIN: BRAND
-            <!<div class="c-navbar-wrapper clearfix">
-                <div class="c-brand c-pull-left">
-                    <a href="index-2.html" class="c-logo">
-                        <img src="assets/base/img/layout/logos/logo-1.png" alt="letshomestudy.com" class="c-desktop-logo">
-                        <img src="assets/base/img/layout/logos/logo-1.png" alt="letshomestudy.com" class="c-desktop-logo-inverse">
-                        <img src="assets/base/img/layout/logos/logo-1.png" alt="letshomestudy.com" class="c-mobile-logo"> </a>
-                    <button class="c-hor-nav-toggler" type="button" data-target=".c-mega-menu">
-                        <span class="c-line"></span>
-                        <span class="c-line"></span>
-                        <span class="c-line"></span>
-                    </button>
-                    <button class="c-topbar-toggler" type="button">
-                        <i class="fa fa-ellipsis-v"></i>
-                    </button>
-                    <button class="c-search-toggler" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                    <button class="c-cart-toggler" type="button">
-                        <i class="icon-handbag"></i>
-                        <span class="c-cart-number c-theme-bg">2</span>
-                    </button>
-                </div>
-                <!-- END: BRAND -->-->
+
             <!-- BEGIN: QUICK SEARCH -->
             <form class="c-quick-search" action="#">
                 <input type="text" name="query" placeholder="Type to search..." value="" class="form-control" autocomplete="off">
@@ -350,19 +312,51 @@ Follow: http://www.twitter.com/themehats
                         </ul>
                         <!-- END: MOBILE VERSION OF THE TAB MEGA MENU -->
                     </li>
-                    <li class="c-search-toggler-wrapper">
-                        <a href="#" class="c-btn-icon c-search-toggler">
-                            <i class="fa fa-search"></i>
+                    @if(isset($user_name))
+                    <li>
+                        <a href="{{route('my_room')}}" class="c-link dropdown-toggle">My Room
+                            <span class="c-arrow c-toggler"></span>
                         </a>
+                    </li>
+                    @endif
+
+                    <li>
+                        @if(!isset($user_name))
+                            <a href="javascript:;" data-toggle="modal" data-target="#login-form" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-white c-btn-circle c-btn-uppercase c-btn-sbold dashboard-user">
+                                <i class="icon-user"></i>
+                                Sign In</a>
+                        @else
+                            <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle user c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-white c-btn-circle c-btn-uppercase c-btn-sbold dashboard-user">
+                                <i class="icon-user"></i>
+                                {{$user_name}}</a>
+                            <ul class="dropdown-menu main-list" role="menu">
+                                <li><a href="app-student-profile.html">My Profile</a></li>
+                                <li><a href="app-student-billing.html">My Wishlist</a></li>
+                                <li><a href="login.html">Account Settings</a></li>
+                                <li><a href="login.html">Purchase History</a></li>
+                                <li><a href="login.html">Help</a></li>
+                                <li><a href="#" onclick="logout();">Logout</a></li>
+                            </ul>
+                        @endif
+
+
                     </li>
 
                     <li>
-                        <a href="javascript:;" @if(!isset($user_name)) data-toggle="modal" data-target="#login-form" @endif class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-white c-btn-circle c-btn-uppercase c-btn-sbold dashboard-user">
-                            <i class="icon-user"></i>
-                            @if(isset($user_name))
-                                {{$user_name}}
-                            @else Sign In @endif</a>
+                        <a href="javascript:;" class="dropdown-toggle c-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-shopping-cart fa-6" aria-hidden="true"></i> (<span id="cart-count">{{count($cart_list)}}</span>)
+                        </a>
+                        <ul class="dropdown-menu main-list products" role="menu" @if(count($cart_list) == 0) style="display: none;" @endif>
+
+                            @if(count($cart_list) > 0)
+                            <li class="go-to-checkout" style="margin-top: 7px;" >
+                                <a class="btn btn-md c-btn-square c-btn-uppercase c-btn-bold" style="width: 100%;" href="{{route('cart')}}">Checkout</a>
+                            </li>
+                            @endif
+
+                        </ul>
                     </li>
+
 
                 </ul>
             </nav>
@@ -511,15 +505,15 @@ Follow: http://www.twitter.com/themehats
                 <ul>
                     <!--BEGIN: SLIDE #1 -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-style="dark">
-                        <img alt="" src="assets/base/img/bg (1).jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> </li>
+                        <img alt="" src="home/assets/base/img/bg (1).jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> </li>
                     <!--END -->
                     <!--BEGIN: SLIDE #2 -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-style="dark">
-                        <img alt="" src="assets/base/img/bg (2).jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> </li>
+                        <img alt="" src="home/assets/base/img/bg (2).jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> </li>
                     <!--END -->
                     <!--BEGIN: SLIDE #3 -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-style="dark">
-                        <img alt="" src="assets/base/img/bg (3).jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> </li>
+                        <img alt="" src="home/assets/base/img/bg (3).jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> </li>
                     <!--END -->
                 </ul>
             </div>
@@ -588,7 +582,7 @@ Follow: http://www.twitter.com/themehats
                         <div class="c-content-label c-font-uppercase c-font-bold">Latest Projects</div>
                         <div class="owl-carousel owl-theme c-theme owl-single">
                             <div class="item">
-                                <div class="c-content-media-2 c-bg-img-center" style="background-image: url(assets/base/img/content/stock3/17.jpg); min-height: 380px;">
+                                <div class="c-content-media-2 c-bg-img-center" style="background-image: url(home/assets/base/img/content/stock3/17.jpg); min-height: 380px;">
                                     <div class="c-panel">
                                         <div class="c-fav">
                                             <i class="icon-heart c-font-thin"></i>
@@ -598,7 +592,7 @@ Follow: http://www.twitter.com/themehats
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="c-content-media-2 c-bg-img-center" style="background-image: url(assets/base/img/content/stock3/8.jpg); min-height: 380px;">
+                                <div class="c-content-media-2 c-bg-img-center" style="background-image: url(home/assets/base/img/content/stock3/8.jpg); min-height: 380px;">
                                     <div class="c-panel">
                                         <div class="c-fav">
                                             <i class="icon-heart c-font-thin"></i>
@@ -608,7 +602,7 @@ Follow: http://www.twitter.com/themehats
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="c-content-media-2 c-bg-img-center" style="background-image: url(assets/base/img/content/stock3/35.jpg); min-height: 380px;">
+                                <div class="c-content-media-2 c-bg-img-center" style="background-image: url(home/assets/base/img/content/stock3/35.jpg); min-height: 380px;">
                                     <div class="c-panel">
                                         <div class="c-fav">
                                             <i class="icon-heart c-font-thin"></i>
@@ -626,7 +620,7 @@ Follow: http://www.twitter.com/themehats
                         <a href="#" class="c-title c-font-uppercase  c-font-bold c-theme-on-hover">Take the web by storm with letshomestudy.com</a>
                         <p>Lorem ipsum dolor sit amet, coectetuer adipiscing elit sed diam nonummy et nibh euismod aliquam erat volutpat</p>
                         <div class="c-author">
-                            <div class="c-portrait" style="background-image: url(assets/base/img/content/team/team16.jpg)"></div>
+                            <div class="c-portrait" style="background-image: url(home/assets/base/img/content/team/team16.jpg)"></div>
                             <div class="c-name c-font-uppercase">Jack Nilson</div>
                         </div>
                     </div>
@@ -661,7 +655,7 @@ Follow: http://www.twitter.com/themehats
                         <div class="c-content-testimonial-3 c-option-light">
                             <div class="c-content"> Lorem ipsum dolor sit amet et consectetuer adipiscing elit, sed nonummy nib euismod tincid unt ut ed laoreet dolore sit amet consectetuer adipiscing. </div>
                             <div class="c-person">
-                                <img src="assets/base/img/content/avatars/team1.jpg" class="img-responsive">
+                                <img src="home/assets/base/img/content/avatars/team1.jpg" class="img-responsive">
                                 <div class="c-person-detail c-font-uppercase">
                                     <h4 class="c-name">Mark Doe</h4>
                                     <p class="c-position c-font-bold c-theme-font">CFO, Walmart</p>
@@ -673,7 +667,7 @@ Follow: http://www.twitter.com/themehats
                         <div class="c-content-testimonial-3 c-option-light">
                             <div class="c-content"> Lorem ipsum dolor sit amet et consectetuer adipiscing elit, sed nonummy nib euismod tincid unt ut ed laoreet dolore sit amet consectetuer adipiscing. </div>
                             <div class="c-person">
-                                <img src="assets/base/img/content/avatars/team6.jpg" class="img-responsive">
+                                <img src="home/assets/base/img/content/avatars/team6.jpg" class="img-responsive">
                                 <div class="c-person-detail c-font-uppercase">
                                     <h4 class="c-name">Ashley Benson</h4>
                                     <p class="c-position c-font-bold c-theme-font">CFO, Loop Inc</p>
@@ -685,7 +679,7 @@ Follow: http://www.twitter.com/themehats
                         <div class="c-content-testimonial-3 c-option-light">
                             <div class="c-content"> Lorem ipsum dolor sit amet et consectetuer adipiscing elit, sed nonummy nib euismod tincid unt ut ed laoreet dolore sit amet consectetuer adipiscing. </div>
                             <div class="c-person">
-                                <img src="assets/base/img/content/avatars/team4.jpg" class="img-responsive">
+                                <img src="home/assets/base/img/content/avatars/team4.jpg" class="img-responsive">
                                 <div class="c-person-detail c-font-uppercase">
                                     <h4 class="c-name">Nina Kunis</h4>
                                     <p class="c-position c-font-bold c-theme-font">CFO, ERA Tech</p>
@@ -697,7 +691,7 @@ Follow: http://www.twitter.com/themehats
                         <div class="c-content-testimonial-3 c-option-light">
                             <div class="c-content"> Lorem ipsum dolor sit amet et consectetuer adipiscing elit, sed nonummy nib euismod tincid unt ut ed laoreet dolore sit amet consectetuer adipiscing. </div>
                             <div class="c-person">
-                                <img src="assets/base/img/content/avatars/team8.jpg" class="img-responsive">
+                                <img src="home/assets/base/img/content/avatars/team8.jpg" class="img-responsive">
                                 <div class="c-person-detail c-font-uppercase">
                                     <h4 class="c-name">Ashley Benson</h4>
                                     <p class="c-position c-font-bold c-theme-font">CFO, Loop Inc</p>
@@ -709,7 +703,7 @@ Follow: http://www.twitter.com/themehats
                         <div class="c-content-testimonial-3 c-option-light">
                             <div class="c-content"> Lorem ipsum dolor sit amet et consectetuer adipiscing elit, sed nonummy nib euismod tincid unt ut ed laoreet dolore sit amet consectetuer adipiscing. </div>
                             <div class="c-person">
-                                <img src="assets/base/img/content/avatars/team7.jpg" class="img-responsive">
+                                <img src="home/assets/base/img/content/avatars/team7.jpg" class="img-responsive">
                                 <div class="c-person-detail c-font-uppercase">
                                     <h4 class="c-name">Mark Jeep</h4>
                                     <p class="c-position c-font-bold c-theme-font">CFO, ERA Tech</p>
@@ -723,7 +717,7 @@ Follow: http://www.twitter.com/themehats
     </div>
     <!-- END: CONTENT/TESTIMONIALS/TESTIMONIALS-6-3 -->
     <!-- BEGIN: CONTENT/STATS/COUNTER-4 -->
-    <div class="c-content-box c-size-lg c-bg-parallax" style="background-image: url(assets/base/img/content/backgrounds/bg-40.jpg)">
+    <div class="c-content-box c-size-lg c-bg-parallax" style="background-image: url(home/assets/base/img/content/backgrounds/bg-40.jpg)">
         <div class="container">
             <div class="c-content-counter-1">
                 <div class="c-content-title-1">
@@ -801,17 +795,17 @@ Follow: http://www.twitter.com/themehats
                                 <div class="col-md-7 col-sm-12">
                                     <ul class="c-photos">
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/01.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/01.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/015.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/015.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/20.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/20.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/64.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/64.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/23.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/23.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/35.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/35.jpg" alt="" /> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -839,17 +833,17 @@ Follow: http://www.twitter.com/themehats
                                 <div class="col-md-7">
                                     <ul class="c-photos">
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/08.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/08.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/013.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/013.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/23.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/23.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/61.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/61.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/25.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/25.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/39.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/39.jpg" alt="" /> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -877,17 +871,17 @@ Follow: http://www.twitter.com/themehats
                                 <div class="col-md-7">
                                     <ul class="c-photos">
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/04.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/04.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/016.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/016.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/27.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/27.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/59.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/59.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/28.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/28.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/45.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/45.jpg" alt="" /> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -915,17 +909,17 @@ Follow: http://www.twitter.com/themehats
                                 <div class="col-md-7">
                                     <ul class="c-photos">
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/02.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/02.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/012.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/012.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/19.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/19.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/37.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/37.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/29.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/29.jpg" alt="" /> </li>
                                         <li class="col-md-4 col-sm-4">
-                                            <img class="img-responsive" src="assets/base/img/content/stock/39.jpg" alt="" /> </li>
+                                            <img class="img-responsive" src="home/assets/base/img/content/stock/39.jpg" alt="" /> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -950,13 +944,13 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item graphic">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/08-long.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/08-long.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
                                         <a href="ajax/projects/project1.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase">explore</a>
-                                        <a href="assets/base/img/content/stock/08.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Dashboard<br>by Paul Flavius Nechita">zoom</a>
+                                        <a href="home/assets/base/img/content/stock/08.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Dashboard<br>by Paul Flavius Nechita">zoom</a>
                                     </div>
                                 </div>
                             </div>
@@ -965,13 +959,13 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item web-design logos wow animate fadeInLeft">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/07.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/07.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
                                         <a href="ajax/projects/project2.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase">explore</a>
-                                        <a href="assets/base/img/content/stock/07.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="World Clock Widget<br>by Paul Flavius Nechita">zoom</a>
+                                        <a href="home/assets/base/img/content/stock/07.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="World Clock Widget<br>by Paul Flavius Nechita">zoom</a>
                                     </div>
                                 </div>
                             </div>
@@ -980,7 +974,7 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item graphic logos wow animate fadeInLeft" data-wow-delay="0.2s">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/09.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/09.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
@@ -995,13 +989,13 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item identity web-design wow animate fadeInLeft" data-wow-delay="0.4s">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/014.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/014.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
                                         <a href="ajax/projects/project4.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase">explore</a>
-                                        <a href="assets/base/img/content/stock/014.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="WhereTO App<br>by Tiberiu Neamu">zoom</a>
+                                        <a href="home/assets/base/img/content/stock/014.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="WhereTO App<br>by Tiberiu Neamu">zoom</a>
                                     </div>
                                 </div>
                             </div>
@@ -1010,13 +1004,13 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item web-design graphic wow animate fadeInLeft">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/34.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/34.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
                                         <a href="ajax/projects/project5.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase">explore</a>
-                                        <a href="assets/base/img/content/stock/34.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Events and  More<br>by Tiberiu Neamu">zoom</a>
+                                        <a href="home/assets/base/img/content/stock/34.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Events and  More<br>by Tiberiu Neamu">zoom</a>
                                     </div>
                                 </div>
                             </div>
@@ -1025,13 +1019,13 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item identity web-design wow animate fadeInLeft" data-wow-delay="0.2s">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/53.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/53.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
                                         <a href="ajax/projects/project6.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase">explore</a>
-                                        <a href="assets/base/img/content/stock/53.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Ski * Buddy<br>by Tiberiu Neamu">zoom</a>
+                                        <a href="home/assets/base/img/content/stock/53.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Ski * Buddy<br>by Tiberiu Neamu">zoom</a>
                                     </div>
                                 </div>
                             </div>
@@ -1040,13 +1034,13 @@ Follow: http://www.twitter.com/themehats
                     <div class="cbp-item graphic logos wow animate fadeInLeft" data-wow-delay="0.4s">
                         <div class="cbp-caption">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="assets/base/img/content/stock/39.jpg" alt=""> </div>
+                                <img src="home/assets/base/img/content/stock/39.jpg" alt=""> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="c-masonry-border"></div>
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
                                         <a href="ajax/projects/project7.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase">explore</a>
-                                        <a href="assets/base/img/content/stock/39.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Seemple* Music for iPad<br>by Tiberiu Neamu">zoom</a>
+                                        <a href="home/assets/base/img/content/stock/39.jpg" class="cbp-lightbox cbp-l-caption-buttonRight btn c-btn-square c-btn-border-1x c-btn-white c-btn-bold c-btn-uppercase" data-title="Seemple* Music for iPad<br>by Tiberiu Neamu">zoom</a>
                                     </div>
                                 </div>
                             </div>
@@ -1058,7 +1052,7 @@ Follow: http://www.twitter.com/themehats
     </div>
     <!-- END: CONTENT/PORTFOLIO/LATEST-WORKS-1 -->
     <!-- BEGIN: CONTENT/PRICING/PRICING-5 -->
-    <div class="c-content-box c-size-md">
+    <div class="c-content-box c-size-md" id="purchase-section">
         <div class="container">
             <div class="row c-margin-t-10 c-margin-b-10">
                 <div class="col-md-12">
@@ -1082,6 +1076,7 @@ Follow: http://www.twitter.com/themehats
                     </div>
 
 
+                    <div class="scroll-courses-col">
                     @foreach($feature_detail as $course_subscription_id => $feature_detail_item)
                         <div class="col-md-3 col-sm-4">
                             <div class="c-content @if($course_subscription_id%2 == 0) c-column-odd @else c-column-even @endif c-padding-adjustment">
@@ -1110,88 +1105,28 @@ Follow: http://www.twitter.com/themehats
                                     <span class="c-font-30 c-font-bold">{{$feature_detail_item['subscription_cost']}}</span>
                                 </div>
                                 <div class="c-row c-purchase">
-                                    <a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold"
 
-                                       @if(!isset($user_name))
-                                            data-toggle="modal" data-target="#login-form" >Login to purchase
-                                       @elseif(isset($user_order_history[$course_subscription_id]))
-                                            disabled="disabled">BOUGHT
-                                       @else
-                                            href="checkout\{{$course_subscription_id}}">PURCHASE
-                                       @endif
-                                    </a>
+                                    @if(!isset($user_name))
+                                        <a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold" onclick="addToCart({{$course_subscription_id}}, '{{$main_subscriptions[$course_subscription_id]}}', this)">
+                                           Add To Cart
+                                        </a>
+                                    @elseif(isset($user_order_history[$course_subscription_id]))
+
+                                        <a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold" disabled="disabled">BOUGHT
+                                        </a>
+                                    @elseif(isset($cart_list[$course_subscription_id]))
+                                        <a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold" href="{{route('cart')}}">Checkout</a>
+                                    @else
+                                        <a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold" onclick="addToCart({{$course_subscription_id}}, '{{$main_subscriptions[$course_subscription_id]}}', this)" >Add To Cart</a>
+                                    @endif
+
+
                                 </div>
                             </div>
                         </div>
                     @endforeach
+                    </div>
 
-                   {{-- <div class="col-md-3 col-sm-4">
-                        <div class="c-content c-column-even c-padding-adjustment">
-                            @foreach($feature_detail as $course_subscription_id => $feature_detail_item)
-                                <div class="c-row c-type c-font-20">{{$main_subscriptions[$course_subscription_id]}}</div>
-                                @foreach($feature_detail_item as $course_feature_id => $course_feature_detail)
-                                    <div class="c-row c-font-17"> {{$course_feature_detail['quantity']}} </div>
-                                @endforeach
-                                <div class="c-row c-purchase">
-                                    <button class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold">PURCHASE</button>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="c-content c-column-odd c-padding-adjustment">
-                            <div class="c-row c-type c-font-20">Community</div>
-                            <div class="c-row c-font-17">100
-                                <span class="c-sub-title">End Products</span>
-                            </div>
-                            <div class="c-row">
-                                <i class="fa fa-check c-font-20"></i>
-                                <span class="c-sub-title">Standard Features</span>
-                            </div>
-                            <div class="c-row">
-                                <i class="fa fa-check c-font-20"></i>
-                                <span class="c-sub-title">Free Issues</span>
-                            </div>
-                            <div class="c-row">
-                                <i class="fa fa-check c-font-20"></i>
-                                <span class="c-sub-title">Paid Issues</span>
-                            </div>
-                            <div class="c-row c-price">
-                                <span class="c-dollar c-font-20">$</span>
-                                <span class="c-font-30 c-font-bold">99</span>
-                            </div>
-                            <div class="c-row c-purchase">
-                                <button class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold">PURCHASE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="c-content c-column-even">
-                            <div class="c-row c-type c-font-20">Professional</div>
-                            <div class="c-row c-font-17">Unlimited
-                                <span class="c-sub-title">End Products</span>
-                            </div>
-                            <div class="c-row">
-                                <i class="fa fa-check c-font-20"></i>
-                                <span class="c-sub-title">Standard Features</span>
-                            </div>
-                            <div class="c-row">
-                                <i class="fa fa-check c-font-20"></i>
-                                <span class="c-sub-title">Free Issues</span>
-                            </div>
-                            <div class="c-row">
-                                <i class="fa fa-check c-font-20"></i>
-                                <span class="c-sub-title">Paid Issues</span>
-                            </div>
-                            <div class="c-row c-price">
-                                <span class="c-dollar c-font-20">$</span>
-                                <span class="c-font-30 c-font-bold">149</span>
-                            </div>
-                            <div class="c-row c-purchase">
-                                <button class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold">PURCHASE</button>
-                            </div>
-                        </div>
-                    </div>--}}
                 </div>
             </div>
         </div>
@@ -1358,38 +1293,46 @@ Follow: http://www.twitter.com/themehats
 <!--[if lt IE 9]>
 
 
-<script src="../assets/global/plugins/excanvas.min.js"></script>
+
+<script src="../home/assets/global/plugins/excanvas.min.js"></script>
 <![endif]-->
-<link href="/css/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+<link href="home/css/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
+<style type="text/css" rel="stylesheet">
+    .scroll-courses-col {
+        /*width: auto;*/
+        /*overflow-x: scroll;*/
+        /*overflow-y: hidden;
+        white-space: nowrap;*/
+    }
+</style>
 
-
-<script src="assets/plugins/jquery.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery.easing.min.js" type="text/javascript"></script>
-<script src="assets/plugins/reveal-animate/wow.js" type="text/javascript"></script>
-<script src="assets/base/js/scripts/reveal-animate/reveal-animate.js" type="text/javascript"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/jquery.contextMenu.js" type="text/javascript"></script>
+<script src="home/assets/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/jquery.easing.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/reveal-animate/wow.js" type="text/javascript"></script>
+<script src="home/assets/base/js/scripts/reveal-animate/reveal-animate.js" type="text/javascript"></script>
+<script src="home/js/jquery-ui.js"></script>
+<script src="home/js/jquery.contextMenu.js" type="text/javascript"></script>
 <!-- END: CORE PLUGINS -->
 <!-- BEGIN: LAYOUT PLUGINS -->
-<script src="assets/plugins/revo-slider/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
-<script src="assets/plugins/revo-slider/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
-<script src="assets/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js" type="text/javascript"></script>
-<script src="assets/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js" type="text/javascript"></script>
-<script src="assets/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js" type="text/javascript"></script>
-<script src="assets/plugins/revo-slider/js/extensions/revolution.extension.video.min.js" type="text/javascript"></script>
-<script src="assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
-<script src="assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
-<script src="assets/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
-<script src="assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
-<script src="assets/plugins/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="assets/plugins/slider-for-bootstrap/js/bootstrap-slider.js" type="text/javascript"></script>
+<script src="home/assets/plugins/revo-slider/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/revo-slider/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/revo-slider/js/extensions/revolution.extension.video.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+<script src="home/assets/plugins/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="home/assets/plugins/slider-for-bootstrap/js/bootstrap-slider.js" type="text/javascript"></script>
 <!-- END: LAYOUT PLUGINS -->
 <!-- BEGIN: THEME SCRIPTS -->
-<script src="assets/base/js/components.js" type="text/javascript"></script>
-<script src="assets/base/js/components-shop.js" type="text/javascript"></script>
-<script src="assets/base/js/app.js" type="text/javascript"></script>
+<script src="home/assets/base/js/components.js" type="text/javascript"></script>
+<script src="home/assets/base/js/components-shop.js" type="text/javascript"></script>
+<script src="home/assets/base/js/app.js" type="text/javascript"></script>
 <script>
     $(document).ready(function()
     {
@@ -1470,7 +1413,7 @@ Follow: http://www.twitter.com/themehats
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','js/analytics.js','ga');
+    })(window,document,'script','home/js/analytics.js','ga');
     ga('create', 'UA-64667612-1', 'themehats.com');
     ga('send', 'pageview');
 
@@ -1489,23 +1432,18 @@ Follow: http://www.twitter.com/themehats
         var input = {
             url: '{{route('logout')}}',
             data: {
-
             },
-
             success: function (best_response) {
-
-                window.location = '{{route('login')}}';
-
+                window.location = '{{route('home-page')}}';
             },
             type: 'POST'
-
         };
 
         var temp = $.ajax(input);
     }
 
     $(document).ready(function () {
-        contextMenuBind();
+        //contextMenuBind();
     });
 
     function contextMenuBind()
@@ -1580,11 +1518,37 @@ Follow: http://www.twitter.com/themehats
         var temp = $.ajax(input);
     }
 
+    function addToCart(product_id, product_name, element)
+    {
+        var input = {
+            url: '<?php echo e(route('add_to_cart')); ?>',
+            data: {
+                product_id: product_id
+            },
+            success: function (response) {
+                $('.products').show().removeAttr('style');
+                $('.go-to-checkout').remove();
+
+                $(element).parent().html('<a class="btn btn-md c-btn-square c-btn-green c-btn-uppercase c-btn-bold" href="{{route('cart')}}">Checkout</a>');
+                $('#cart-count').html(parseInt($('#cart-count').html()) + 1);
+
+                $('.products').append('<li><a href="{{route('cart_product_detail')}}/'+ product_id +'">' + product_name + '</a></li>' +
+                    '<li class="go-to-checkout" style="margin-top: 7px;" >' +
+                    '<a class="btn btn-md c-btn-square c-btn-uppercase c-btn-bold" style="width: 100%;" href="{{route('cart')}}">Checkout</a>' +
+                    '</li>');
+                $('.go-to-checkout').fadeIn(300);
+
+
+            },
+            type: 'POST'
+
+        };
+
+        $.ajax(input);
+    }
+
 
 </script>
 </body>
 
-
-
-<!-- Mirrored from themehats.com/themes/letshomestudy.com/home-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Feb 2016 11:29:54 GMT -->
 </html>

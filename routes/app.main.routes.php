@@ -7,6 +7,7 @@
  */
 
 Route::get('/', [ 'as' => '/', 'uses' => 'MainDataController@index' ]);
+Route::get('my-room', [ 'as' => 'my_room', 'uses' => 'MainDataController@myRoom' ]);
 Route::post('logout', [ 'as' => 'logout', 'uses' => 'MainDataController@logout']);
 
 Route::get('knowledge-center', [ 'as' => 'knowledge-center', 'uses' => 'MainDataController@knowledgeCenter' ]);
@@ -22,14 +23,19 @@ Route::post('save-drag-drop-list', [ 'as' => 'save_drag_drop_list', 'uses' => 'M
 Route::post('get-ajax-html', [ 'as' => 'get_ajax_html', 'uses' => 'MainDataController@getAjaxHtml' ]);
 
 
-Route::get('checkout/{order_id}', [ 'as' => 'dashboard', 'uses' => 'MainDataController@checkout' ]);
-Route::post('purchase-course', [ 'as' => 'purchase_course', 'uses' => 'MainDataController@purchaseCourse' ]);
 Route::get('academic', [ 'as' => 'academic', 'uses' => 'MainDataController@academicRoot' ]);
 
 
 Route::post('get-subject-detail', [ 'as' => 'get_subject_detail', 'uses' => 'MainDataController@getSubjectDetail' ]);
 
 
+Route::get('cart/{order_id?}', [ 'as' => 'cart', 'uses' => 'ManageCartController@getCartView' ]);
+Route::post('add-to-cart', [ 'as' => 'add_to_cart', 'uses' => 'ManageCartController@addToCart' ]);
+Route::post('remove-from-cart', [ 'as' => 'remove_from_cart', 'uses' => 'ManageCartController@removeFromCart' ]);
+Route::get('cart-product-detail/{course_subscription_id?}', [ 'as' => 'cart_product_detail', 'uses' => 'ManageCartController@getCartProductDetail' ]);
+Route::get('checkout/{order_id}', [ 'as' => 'checkout', 'uses' => 'ManageCartController@checkout' ]);
+Route::post('purchase-course', [ 'as' => 'purchase_course', 'uses' => 'ManageCartController@purchaseCourse' ]);
+Route::get('checkout-complete', [ 'as' => 'checkout_complete', 'uses' => 'ManageCartController@getCheckoutCompleteView' ]);
 
 
 

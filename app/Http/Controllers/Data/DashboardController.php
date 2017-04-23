@@ -22,6 +22,10 @@ class DashboardController extends AbstractBaseController
     {
         $this->init();
         $this->generateSubscriptions();
+
+        $cart_list = \Session::has('cart_list') ? \Session::get('cart_list') : [];
+        $this->view['cart_list'] = $cart_list;
+
         return view('pages.dashboard.dashboard-common', $this->view);
     }
 

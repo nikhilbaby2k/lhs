@@ -35,13 +35,20 @@ class MainDataController extends AbstractBaseController
             Session::clear();
         }
 
-        return redirect('login');
+        return redirect(route('home-page'));
     }
 
     public function index()
     {
+        return redirect(route('home-page'));
+    }
+
+    public function myRoom()
+    {
         $this->init();
 
+        $this->generateSubscriptions();
+        //dd($this->view);
         return view('pages.app', $this->view);
     }
 
@@ -228,30 +235,6 @@ class MainDataController extends AbstractBaseController
         return view('pages.testAjaxHtml');
     }
 
-    public function checkout($order_id)
-    {
-
-        $this->generateSubscriptions();
-        //Un available subscription
-        if (!isset($this->view['main_subscriptions'][$order_id]))
-        {
-            return redirect('dashboard');
-        }
-
-        $this->view['subscription_cost'] = $this->view['feature_detail'][$order_id]['subscription_cost'];
-        $this->view['subscription_name'] = $this->view['main_subscriptions'][$order_id];
-        $this->view['order_id'] = $order_id;
-
-        //dd($this->view['feature_detail'][$order_id]['subscription_cost']);
-
-        if (isset($this->view['user_order_history'][$order_id]))
-        {
-            return redirect('dashboard');
-        }
-
-        $this->init();
-        return view('pages.checkout', $this->view);
-    }
 
     public function getCourseDetails()
     {
@@ -344,24 +327,5 @@ class MainDataController extends AbstractBaseController
     }
 
 
-    public function purchaseCourse()
-    {
-        $order_id = \Request::input('order_id');
-        $user_id = Session::get('user_details')['user_id'];
-
-        if($user_id)
-        {
-            \DB::table('order_history')
-                    ->insert([
-                        'user_id' => $user_id,
-                        'course_subscription_id' => $order_id,
-                    ]);
-
-            return redirect('order-history');
-        }
-
-        return 'fail';
-
-    }
 
 }

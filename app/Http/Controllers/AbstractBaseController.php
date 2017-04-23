@@ -97,18 +97,23 @@ class AbstractBaseController extends Controller
         {
             $user_id = \Session::get('user_details')['user_id'];
 
-            $user_order_data = \DB::table('order_history')
+            $user_order_data = \DB::table('order_history as oh')
+                ->join('course_subscriptions as cs', 'cs.course_subscription_id', '=', 'oh.course_subscription_id')
                 ->where('user_id', $user_id)
                 ->select([
-                    'course_subscription_id',
-                    'inserted_time as purchase_time'
+                    'oh.course_subscription_id',
+                    'oh.inserted_time as purchase_time',
+                    'cs.subscription_name as course_name',
                 ])
                 ->get();
 
 
             foreach ($user_order_data as $user_order_data_item)
             {
-                $user_order_history[$user_order_data_item->course_subscription_id] = $user_order_data_item->purchase_time;
+                $user_order_history[$user_order_data_item->course_subscription_id] = [
+                       'time' => $user_order_data_item->purchase_time,
+                       'course_name' => $user_order_data_item->course_name,
+                ];
             }
 
         }
@@ -153,6 +158,41 @@ class AbstractBaseController extends Controller
             'Need Help' => 'icon-list-unordered',
         ];
 
+    }
+
+    public function addToSession($key, $value, $index_value = '')
+    {
+
+        $current_data = Session::has($key) ? Session::get($key) : [];
+
+        if (!empty($index_value) && !isset($current_data[$index_value]))
+        {
+            $current_data[$index_value] = $value;
+        }
+        else
+        {
+            $current_data[] = $value;
+        }
+
+        Session::put($key, $current_data);
+
+        return $this;
+    }
+
+    public function removeFromSession($key, $index_value)
+    {
+        $current_data = Session::has($key) ? Session::get($key) : [];
+
+        if (empty($index_value))
+        {
+            return $this;
+        }
+
+        unset($current_data[$index_value]);
+
+        Session::put($key, $current_data);
+
+        return $this;
     }
 
 }

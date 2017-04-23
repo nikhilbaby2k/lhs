@@ -23,7 +23,7 @@ class UserLoginController extends AbstractBaseController
     {
         if (!empty(Session::has('user_login')))
         {
-            return redirect('/');
+            return redirect(route('home-page'));
         }
 
         return view('pages.login');
@@ -59,7 +59,7 @@ class UserLoginController extends AbstractBaseController
                     'debug_msg_status' => 1
                 ]);
 
-            return redirect("");
+            return redirect(route('home-page'));
         }
         else
         {
